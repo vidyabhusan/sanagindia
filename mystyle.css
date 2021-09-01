@@ -1,0 +1,277 @@
+/* CSS Document */
+*
+{
+	margin:0px;
+	padding:0px;
+}
+.container
+{
+/*	background-color: #999999;*/
+	width:100%;
+	
+}
+.wrapper
+{
+	width:900px;
+	margin:auto
+}
+.dark
+{
+	background-color:#31353d;
+	color:white;
+}
+.light
+{
+	background-color:#e9edf2;
+}
+#top_left
+{
+	display:inline-block;
+}
+#top_right
+{
+	float:right;
+}
+#bottom_div
+{
+	height:40px;
+	line-height:40px;
+	margin-top:25px;
+	
+}
+
+#top_div
+{
+	height:40px;
+	line-height:40px;
+}
+#clear
+{
+	clear:both;	
+}
+#logo
+{
+	height:100px;
+	width:445px;
+	
+}
+#logo-left
+{
+	display:inlibe-block;
+}
+#logo-right
+{
+	float:right;
+	width:420px;
+	text-align:center;
+	padding-bottom:5px;
+}
+ul
+{
+	list-style:none;	
+}
+/*ul li
+{
+	
+	width:170px;
+	display:inline-block;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	position:relative;
+	border: 1px solid red;
+}*/
+/*ul li a
+{
+	color:white;
+	text-decoration:none;
+	display:block;
+}
+ul li a:hover
+{
+	background-color:orange;
+	color:black;*/
+}
+#slider_image
+{
+	height:450px;
+	z-index:9999;
+}
+#slider_image img
+{
+	width:868px;
+	border:1px solid grey;
+	padding:15px;
+	background:#eee;
+	box-shadow: 5px 5px 10px grey;
+	margin-top:10px;
+	margin-bottom:15px;
+	z-index:9999;
+}
+h3
+{
+	text-align:center;
+	margin-bottom:10px;
+	margin-top:15px;
+}
+p
+{
+	text-align:justify;
+}
+/*ul li ul li
+{
+	display:none;
+}
+ul li:hover ul li
+{
+	display:block;
+}*/
+
+
+
+
+
+/* Clearing floats */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+}
+
+/* Main level */
+.menu {			
+  margin: 0px auto;
+  width: 900px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  
+}
+
+.menu > li {
+  background: #34495e;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+  width:170px;
+  text-align:center;
+ 
+ 	
+ 
+ }
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}		
+
+.menu li:hover {
+  background: #e74c3c;
+}		
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 300px;
+  left: 40%; margin-left: -90px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}		
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
